@@ -1,104 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Configuración inicial usando html enter y seleccionando html5-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Profile</title> <!-- el titulo -->
+    <!-- Fuentes y estilos -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Pagina De Perfil</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
+
 <body>
-    <div class="nav">
-        <ul class="nav-links">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">My Profile</a></li>
-            <li><a href="#" class="active">Find Connections</a></li>
-        </ul>
-        <li class="sign-out"><button class="btn">Sign Out</button></li>
-    </div>       
-    <div class="container">
-        <div class="columna1">
-            <!-- Contenido de la columna izquierda -->
-            <div class="Tarjeta-usuario">
-                <div class="encabezado">
-                    <img class="imagen-usuario" src="/icon/user-circle.png" alt="imagen usuario" width="80px">
-                </div>
-                <div class="cuerpo">
-                    <h2>Jane Doe</h2>
-                    <div class="ubicacion">
-                        <img src="/icon/map-marker.png" alt="mapita" width="13px" height="13px"> Seattle
+    <div class="top"> <!--clase top para marcar la barra de arriba-->
+        <div class="nav">
+            <h1 class="nav-title">Profile</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">My Profile</a></li>
+                <li><a href="#">Find Connections</a></li>
+                <li><button class="btn">Sign Out</button></li>
+            </ul>
+        </div>  
+    </div>
+    <div class="container"><!--el contenedor de todo-->
+        <div class="row"><!--el contenedor de las columnas-->
+            <!--la columna izquierda-->
+            <div class="col-iz">
+                <div class="user-card">
+                    <div class="card-header">
+                        <img src="img/jane-m.jpg" alt="jane-medium-avatar" class="avatar-m">
                     </div>
-                    <div class="capacidades">
-                        Developer | Engineer | Problem Solver
+                    <div class="card-body">
+                        <h1>Jane Doe</h1>
+                        <h3>
+                            <img src="icon/map-marker.png" alt="pin" class="icon-s"> 
+                            Seattle
+                        </h3>
+                        <p>Developer | Engineer | Problem Solver<br>
+                        Master of shadows and the Internet!</p>
+                        <p>
+                            <a href="#">
+                                <img src="icon/gear.png" alt="gear" class="icon-s"> 
+                                edit profile
+                            </a>
+                        </p>
                     </div>
-                    <div>
-                        Master of shadows and the Internet!
+                </div>
+
+                <div class="card">
+                    <div class="header">
+                        Education
                     </div>
-                    <div class="edicion">
-                        <img src="/icon/gear.png" alt="tuerquita" width="13px" height="13px">
-                        <a href="#">edit profile</a>
+                    <div class="card-body">
+                        <h2>Coding Dojo Full Stack Bootcamp</h2>
+                        <p class="dates">Dec 2019 - Mar 2020</p>
+                        <p>Triple Black Belt in Pyton, C#, and MERN...</p>
                     </div>
                 </div>
+
             </div>
-            <div class="recuadro-titulo">
-                <div class="cabezarecuadro">
-                    Education
+
+            <!-- columna derecha -->
+            <div class="col-der">
+                <div class="card">
+                    <div class="header">
+                        <span class="connections">2</span>
+                        Connection Requests
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/todd-s.jpg" alt="todd" class="avatar-s">
+                            <span>Todd E.</span>
+                        </span>
+                        <span class="end">
+                            <img src="icon/accept-circle.png" alt="accept" class="avatar-s">
+                            <img src="icon/close-circle.png" alt="decline" class="avatar-s">
+                        </span>
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/phil-s.jpg" alt="phil" class="avatar-s">
+                            <span>Phil K.</span>
+                        </span>
+                        <span class="end">
+                            <img src="icon/accept-circle.png" alt="accept" class="avatar-s">
+                            <img src="icon/close-circle.png" alt="decline" class="avatar-s">
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="Education">
-                <div class="cuerpo-education">
-                    <ul>
-                        <li>Coding Dojo - Full Stack Bootcamp</li>
-                            <ul>
-                                <li class="fecha">Dec 2019 - Mar 2020</li>
-                            </ul>
-                        <li>Triple black belt in Python, MERN, and C#</li>
-                    </ul>
+                <div class="card">
+                    <div class="header">
+                        <span class="connections">500+</span>
+                        Your Connections
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/adrien-s.jpg" alt="adrien" class="avatar-s">
+                            <span>Adrien D.</span>
+                        </span>
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/anne-s.jpg" alt="anne" class="avatar-s">
+                            <span>Anne J.</span>
+                        </span>
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/alayne-s.jpg" alt="alayne" class="avatar-s">
+                            <span>Alayne T.</span>
+                        </span>
+                    </div>
+                    <div class="user-line">
+                        <span class="start">
+                            <img src="img/arry-s.jpg" alt="arry" class="avatar-s">
+                            <span>Arry Y.</span>
+                        </span>
+                    </div>
+                    <div class="footer">
+                        <a href="#">View More</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="columna2">
-            <!-- Contenido de la columna derecha -->
-            <div class="recuadro-titulo">
-                <div class="cabezarecuadro">
-                    <span>2</span> Connection Requests
-                </div>
-            </div>
-            <div class="tarjet">
-                <div class="cuerpo-connection-requests">
-                    <ul>
-                        <li>
-                            <img src="/icon/user-circle.png" alt="user" height="30px"> Todd E
-                            <img src="/icon/accept-circle.png" alt="aceptar" height="30px">
-                            <img src="/icon/close-circle.png" alt="rechazar" height="30px">
-                        </li>
-                        <li>
-                            <img src="/icon/user-circle.png" alt="user" height="30px"> Phil K
-                            <img src="/icon/accept-circle.png" alt="aceptar" height="30px">
-                            <img src="/icon/close-circle.png" alt="rechazar" height="30px">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="recuadro-titulo">
-                <div class="cabezarecuadro">
-                    <span>500+</span> Your Connections
-                </div>
-            </div>
-            <div class="tu-conexion">
-                <div class="cuerpo-your-connections">
-                    <ul>
-                        <li><img src="/img/adrien-s.jpg" alt="adrien-s" height="30px"> Adrien D</li>
-                        <li><img src="/img/anne-s.jpg" alt="anne-s" height="30px"> Anne J</li>
-                        <li><img src="/img/alayne-s.jpg" alt="alayne-s" height="30px"> Alayne T</li>
-                        <li><img src="/img/arry-s.jpg" alt="arry-s" height="30px"> Arry Y</li>
-                    </ul>
-                </div>
-            </div>
+            </div>  
         </div>
     </div>
 </body>
+
 </html>

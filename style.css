@@ -1,123 +1,170 @@
-/* Estilos generales */
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; /* Ancho máximo para el contenedor */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    padding: 20px; /* Espaciado en los lados del contenedor */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
 }
 
-ul {
-    list-style: none; /* Elimina las viñetas */
-    padding-left: 0; /* Elimina el espacio izquierdo predeterminado */
-}
-
-.fecha{
-    margin-left: 10px;
-    color: #adadad;
+.top {
+    background-color: #333333;
 }
 
 .nav {
-    background-color: #333; /* Fondo negro para la barra de navegación */
-    color: white;
+    width: 1080px;
+    margin: 0 auto;
+    color: #ffffff;
+    height: 80px;
     display: flex;
     align-items: center;
-    padding: 10px;
-    width: 100%; /* Ocupar todo el ancho del contenedor */
-}
-
-.nav-title {
-    margin-left: 20px; /* Margen izquierdo para el título "Profile" */
+    justify-content: space-between;
 }
 
 .nav-links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    width: 50%;
     display: flex;
-    gap: 20px; /* Espaciado entre elementos de navegación */
     align-items: center;
-    margin-left: 30px; /* Margen izquierdo para los enlaces de navegación */
+    list-style-type: none;
+    justify-content: space-around;
 }
 
-.nav-links li a {
-    color: white; /* Cambiar el color del texto a blanco */
-    text-decoration: none; /* Quitar el subrayado de los enlaces */
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-title {
+    margin-left: 20px;
 }
 
 .btn {
-    color: white;
-    background-color: rgb(30, 152, 156);
-    box-shadow: 5px 5px black;
+    height: 35px;
+    width: 100px;
+    background-color: #17a2b8;
+    color: #ffffff;
     border: none;
+    font-size: 16px;
+    box-shadow: 5px 5px #000000;
+    cursor: pointer; /* para que se vea que lo seleccionas */
 }
 
-/* Aplica margen a ambas columnas */
-.columna1,
-.columna2 {
-    flex: 1; /* Cada columna ocupará un espacio igual */
-    padding: 20px; /* Espaciado interno en cada columna */
-    box-sizing: border-box; /* Asegura que el espaciado no afecte el ancho total */
+.container {
+    width: 1080px;
+    margin: 0 auto;
 }
 
-/* boton Sign Out */
-.sign-out {
-    margin-left: auto; /* Mueve el botón "Sign Out" al margen derecho de la columna derecha */
-    margin-right: 50px;
+.row {
+    display: flex;
 }
 
-/* Estilos para la foto de perfil */
-.encabezado {
-    background-color: #30a5e2; /* Color de fondo celeste */
-    padding: 50px; /* Espaciado interno para la foto de perfil */
-    text-align: center; /* Centra la foto de perfil */
-    position: relative; /* Hace que el posicionamiento sea relativo para alinear la foto */
+.col-der, .col-iz {
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
 }
 
-.imagen-usuario {
-    border-radius: 50%; /* Hace que la imagen de perfil sea circular */
-    border: 3px solid white; /* Borde blanco alrededor de la imagen */
-    padding: 5px; /* Espaciado interno adicional para el borde */
-    width: 80px;
-    height: 80px;
-    position: absolute; /* Hace que el posicionamiento sea absoluto para mover la foto */
-    bottom: -45px; /* Alinea la parte inferior de la foto con la línea inferior de la franja celeste */
-    left: 20px; /* Alinea la foto a unos 10px de la izquierda de la franja celeste */
-    z-index: 1; /* Asegura que la foto esté sobre la franja celeste */
+.col-iz {
+    flex: 2;
 }
 
-/* Estilos Titulos */
-.cabezarecuadro {
-    background-color: rgb(77, 77, 77); /* Color de fondo gris */
-    padding: 10px; /* Espaciado interno para los títulos */
-    margin-bottom: 0px; /* Margen inferior para separar los títulos de contenido */
-    color:#ffffff
+.flex-container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Estilos para los recuadros */
-.cuerpo,
-.Education,
-.tarjet,
-.tu-conexion {
-    background-color: #fff; /* Fondo blanco */
-    border: 1px solid #ddd; /* Borde delgado */
-    padding: 20px; /* Espaciado interno */
-    margin-bottom: 20px; /* Margen inferior para separar los recuadros */
+.user-card, .card {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
 }
 
-/* Estilos para los números circulares */
-span {
-    top: -10px; /* Ajusta la posición vertical del número */
-    right: 10px; /* Ajusta la posición horizontal del número */
-    background-color: lightgray; /* Color de fondo gris claro */
-    border-radius: 50%; /* Hace que el número sea circular */
-    padding: 5px 10px; /* Espaciado interno del número */
-    font-size: 14px; /* Tamaño de fuente del número */
-    color: #333; /* Color del número */
+.card-header {
+    background-color: #17a2b8;
+    height: 125px;
+    margin-bottom: 70px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h1, 
+.card-body h2,
+.card-body h3,
+.card-body p {
+    margin: 20px 0px;
+}
+
+.avatar-m {
+    border-radius: 50%;
+    background-color: #fff;
+    height: 190px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer; /* para que se vea que lo seleccionas */
+}
+
+.icon-s {
+    height: 20px;
+}
+
+a {
+    color: #3a81e6;
+}
+
+.header {
+    background-color: #333333;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar-s {
+    border-radius: 50%;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.user-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.start, .end {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.dates {
+    font-size: 20px;
+    color: #777;
+}
+
+.footer {
+    padding: 20px;
+    border-top: 2px solid #999;
+}
+
+.connections {
+    background-color: #eee;
+    color: #333;
+    font-size: 20px;
+    border-radius: 12px;
+    height: 24px;
+    padding: 0 10px;
+    margin-right: 10px;
 }
